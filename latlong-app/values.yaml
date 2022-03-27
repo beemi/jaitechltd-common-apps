@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/beemi/lat-long-service # Docker image for the service
   pullPolicy: IfNotPresent
-  tag: "main"
+  tag: "main" # Tag for the Docker image
 
 imagePullSecrets: []
 nameOverride: ""
