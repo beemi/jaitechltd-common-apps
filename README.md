@@ -34,3 +34,38 @@ helm template latlong-app --namespace=jaitechltd > latlong-app.yaml
 ```shell
 helm lint latlong-app.yaml
 ```
+
+### Helm dry run
+```shell
+helm install latlong-app --debug --dry-run latlong-app
+```
+
+### Helm install
+
+```shell
+helm install latlong latlong-app --namespace=jaitechltd
+```
+
+### Helm get list of releases
+
+```shell
+helm list --namespace=jaitechltd
+```
+
+# Kubernetes
+
+```shell
+kubectl get pods --all
+```
+
+Delete pods from a namespace
+
+```shell
+kuectl delete pods --all --namespace=jaitechltd
+```
+
+```shell
+kubectl delete pod <pod_name> --namespace=jaitechltd
+```
+
+
