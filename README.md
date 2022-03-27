@@ -52,10 +52,29 @@ helm install latlong latlong-app --namespace=jaitechltd
 helm list --namespace=jaitechltd
 ```
 
+Delete a release with the following command:
+
+```shell
+helm delete latlong-app --namespace=jaitechltd
+```
+
 # Kubernetes
 
 ```shell
+kubectl create namespace <namespace>
+```
+
+```shell
+ kubectl get namespace
+```
+
+```shell
 kubectl get pods --all
+```
+
+kubernetes get deployments
+```shell
+kubectl get deployments
 ```
 
 Delete pods from a namespace
