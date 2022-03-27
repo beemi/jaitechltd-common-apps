@@ -1,0 +1,17 @@
+apiVersion: v2 # mandatory, version of the API
+name: latlong-app # mandatory, name of the chart
+description: A Helm chart for Kubernetes
+keywords:
+  - latlong-app
+  - kubernetes
+  - helm
+  - chart
+  - example
+maintainers:
+  - name: "Raj Beemi"
+    email: beemi.raja@gmail.com
+  - name: "Raj Beemi"
+    email: rbeemi@jaitechltd.com
+type: application
+version: 0.1.0 # mandatory, version of the chart
+appVersion: "1.16.0"
