@@ -1,5 +1,14 @@
 # jaitechltd-common-apps
-Helm  releases for all applications
+Helm  releases for all applications, The package manager for Kubernetes
+
+## Chart.yaml:
+
+A Chart is a Helm package. It contains all of the resource definitions necessary to run an application, tool, or service inside of a Kubernetes cluster. Think of it like the Kubernetes equivalent of a Homebrew formula, an Apt dpkg, or a Yum RPM file.
+
+## Release:
+
+A Release is an instance of a chart running in a Kubernetes cluster. One chart can often be installed many times into the same cluster. And each time it is installed, a new release is created. Consider a MySQL chart. If you want two databases running in your cluster, you can install that chart twice. Each one will have its own release, which will in turn have its own release name.
+
 
 ### Install helm
 ```shell
@@ -42,6 +51,8 @@ helm install latlong-app --debug --dry-run latlong-app
 
 ### Helm install
 
+install a chart with the following command:
+
 ```shell
 helm install latlong latlong-app --namespace=jaitechltd
 ```
@@ -65,11 +76,16 @@ kubectl create namespace <namespace>
 ```
 
 ```shell
+kubectl create namespace jaitechltd
+
+```
+
+```shell
  kubectl get namespace
 ```
 
 ```shell
-kubectl get pods --all
+kubectl get pods --namespace=jaitechltd
 ```
 
 kubernetes get deployments

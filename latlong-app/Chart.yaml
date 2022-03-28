@@ -9,8 +9,6 @@ keywords:
   - example
 maintainers:
   - name: "Raj Beemi"
-    email: beemi.raja@gmail.com
-  - name: "Raj Beemi"
     email: rbeemi@jaitechltd.com
 type: application
 version: 0.1.0 # mandatory, version of the chart
