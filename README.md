@@ -71,24 +71,41 @@ helm delete latlong-app --namespace=jaitechltd
 
 # Kubernetes
 
+Kubernetes get all contexts
+
+```shell
+kubectl config get-contexts
+```
+
+Switch to a context with the following command:
+
+```shell
+kubectl config use-context <context_name>
+```
+Example:
+```shell
+kubectl config use-context minikube
+```
+Create a new namespace with the following command:
 ```shell
 kubectl create namespace <namespace>
 ```
-
+Example:
 ```shell
 kubectl create namespace jaitechltd
 
 ```
-
+Get all namespaces with the following command:
 ```shell
  kubectl get namespace
 ```
-
+Get all pods in a namespace with the following command:
 ```shell
 kubectl get pods --namespace=jaitechltd
 ```
 
-kubernetes get deployments
+Get all pods in all namespaces with the following command:
+
 ```shell
 kubectl get deployments
 ```
