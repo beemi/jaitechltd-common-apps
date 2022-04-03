@@ -4,9 +4,6 @@ Helm  releases for all applications, The package manager for Kubernetes
 ## Prerequisites
 ### Install Helm
 ```shell
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash   
-```
-```shell
 brew install helm
 ```
 ### Install kubectl
@@ -33,6 +30,13 @@ minikube stop
 minikube delete
 minikube logs 
 minikube dashboard
+```
+### Install k9s
+
+https://k9scli.io/
+
+```shell
+brew install k9s
 ```
 
 ## Chart.yaml:
@@ -66,6 +70,9 @@ service.yaml
 ```shell
 helm template latlong-app --namespace=jaitechltd > latlong-app.yaml
 ```
+```shell
+helm template latlong-javaservice --namespace=jaitechltd > latlong-javaservice.yaml
+```
 
 ### Helm lint
 ```shell
@@ -85,6 +92,10 @@ install a chart with the following command:
 helm install latlong latlong-app --namespace=jaitechltd
 ```
 
+```shell
+helm install latlong-javaservice latlong-javaservice --namespace=jaitechltd
+```
+
 ### Helm get list of releases
 
 ```shell
@@ -94,7 +105,11 @@ helm list --namespace=jaitechltd
 Delete a release with the following command:
 
 ```shell
-helm delete latlong-app --namespace=jaitechltd
+helm delete latlong --namespace=jaitechltd
+```
+
+```shell
+helm delete latlong-javaservice --namespace=jaitechltd
 ```
 
 # Kubernetes
