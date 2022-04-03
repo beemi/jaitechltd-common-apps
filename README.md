@@ -1,6 +1,40 @@
 # jaitechltd-common-apps
 Helm  releases for all applications, The package manager for Kubernetes
 
+## Prerequisites
+### Install Helm
+```shell
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash   
+```
+```shell
+brew install helm
+```
+### Install kubectl
+```shell
+brew install kubectl
+```
+### Install kubectx
+```shell
+brew install kubectx
+```
+### Install kubens
+```shell
+brew install kubens
+```
+### Install minikube
+```shell
+brew install minikube
+```
+### Minikube commands
+```shell
+minikube status
+minikube start
+minikube stop
+minikube delete
+minikube logs 
+minikube dashboard
+```
+
 ## Chart.yaml:
 
 A Chart is a Helm package. It contains all of the resource definitions necessary to run an application, tool, or service inside of a Kubernetes cluster. Think of it like the Kubernetes equivalent of a Homebrew formula, an Apt dpkg, or a Yum RPM file.
@@ -10,13 +44,7 @@ A Chart is a Helm package. It contains all of the resource definitions necessary
 A Release is an instance of a chart running in a Kubernetes cluster. One chart can often be installed many times into the same cluster. And each time it is installed, a new release is created. Consider a MySQL chart. If you want two databases running in your cluster, you can install that chart twice. Each one will have its own release, which will in turn have its own release name.
 
 
-### Install helm
-```shell
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash   
-```
-```shell
-brew install helm
-```
+
 
 create a new helm chart with the following command:
 
@@ -120,4 +148,6 @@ kuectl delete pods --all --namespace=jaitechltd
 kubectl delete pod <pod_name> --namespace=jaitechltd
 ```
 
+## :e-mail: Contacts
 
+Owner: [beemi.raja@gmail.com](beemi.raja@gmail.com)
