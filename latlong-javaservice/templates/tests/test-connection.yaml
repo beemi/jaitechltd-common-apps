@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "latlong-javaservice.fullname" . }}-test-connection"
+  labels:
+    {{- include "latlong-javaservice.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "latlong-javaservice.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
