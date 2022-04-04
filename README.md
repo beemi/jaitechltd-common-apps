@@ -114,6 +114,16 @@ helm delete latlong-javaservice --namespace=jaitechltd
 
 # Kubernetes
 
+Kubernetes get running nodes from cluster
+
+```shell
+kubectl get nodes -A
+```
+(or)
+```shell
+kubectl get nodes -n <namespace>
+```
+
 Kubernetes get all contexts
 
 ```shell
